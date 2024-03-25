@@ -23,7 +23,21 @@ class MainActivity : AppCompatActivity() {
 
         binding.ParaEditText.otomatikNokta()
         binding.sendMoney.setOnClickListener {
-            binding.moneyTextView.text = "${binding.ParaEditText.text},${binding.kurus.text}"
+
+
+            binding.moneyTextView.text = "${binding.ParaEditText.text},${binding.kurus.text} TL"
+            val strSayi = "${binding.ParaEditText.text},${binding.kurus.text}"
+
+
+            val yeniString = strSayi.replace(".", "")
+            val dblSayi = yeniString.replace(",",".").toDouble()
+            println(dblSayi)
+
+            /*
+            val replacedString = doubleSayi
+                .replace(".", "")  // Nokta işaretlerini kaldır
+                .replace(",", ".") // Virgül işaretini nokta yap
+            println(replacedString)*/
         }
 
 

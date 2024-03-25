@@ -35,4 +35,3 @@ fun EditText.otomatikNokta(){
 
 
 
-
